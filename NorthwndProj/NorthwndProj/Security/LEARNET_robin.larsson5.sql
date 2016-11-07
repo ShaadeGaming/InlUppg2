@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [LEARNET\robin.larsson5]
+    FROM WINDOWS;
+

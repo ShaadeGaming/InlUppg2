@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inlamningsuppgift2", "Inlamningsuppgift2\Inlamningsuppgift2.csproj", "{ABFE0A07-170D-4555-A9D8-9BE474BEDC80}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Sql code", "Sql code\Sql code.sqlproj", "{ACAB6666-9A00-45E1-B310-30ED15A0109D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABFE0A07-170D-4555-A9D8-9BE474BEDC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFE0A07-170D-4555-A9D8-9BE474BEDC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFE0A07-170D-4555-A9D8-9BE474BEDC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFE0A07-170D-4555-A9D8-9BE474BEDC80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAB6666-9A00-45E1-B310-30ED15A0109D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAB6666-9A00-45E1-B310-30ED15A0109D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAB6666-9A00-45E1-B310-30ED15A0109D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ACAB6666-9A00-45E1-B310-30ED15A0109D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAB6666-9A00-45E1-B310-30ED15A0109D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAB6666-9A00-45E1-B310-30ED15A0109D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
