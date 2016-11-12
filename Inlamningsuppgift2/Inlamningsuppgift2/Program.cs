@@ -36,7 +36,7 @@ namespace Inlamningsuppgift2
                     try
                     {
                         Console.WriteLine("Enter your Customer ID:");
-                        string customerID = Console.ReadLine();
+                        string customerID = Console.ReadLine().ToString().ToUpperInvariant();
                         Console.WriteLine("Enter your Company name:");
                         string companyName = Console.ReadLine();
                         Console.WriteLine("Enter your Contact name:");
@@ -77,7 +77,9 @@ namespace Inlamningsuppgift2
                         Console.WriteLine("Enter your Product name:");
                         string productName = Console.ReadLine();
                         Console.WriteLine("Enter the Price :");
-                        int unitPrice = int.Parse(Console.ReadLine());
+                       double unitPrice = double.Parse(Console.ReadLine());
+                        
+                       
                         string cns = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
                         SqlConnection cn = new SqlConnection(cns);
                         cn.Open();
@@ -87,7 +89,6 @@ namespace Inlamningsuppgift2
                         cmd.Parameters.AddWithValue("@ProductName", productName);
                         cmd.Parameters.AddWithValue("@UnitPrice", unitPrice);
                         cmd.ExecuteNonQuery();
-                        //contactid ska vara en string exempel ALFKI eller 100
                         cn.Close();
                         Console.WriteLine("Product " + productName + " was created and costs: " + unitPrice);
                         counter++;

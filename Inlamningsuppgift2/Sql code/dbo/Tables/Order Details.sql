@@ -93,3 +93,25 @@ BEGIN
         INNER JOIN deleted d ON i.[OrderID]=d.[OrderID] AND i.[ProductID]=d.[ProductID]
         INNER JOIN [dbo].[Products] p ON p.[ProductID]=i.[ProductID]
 END
+GO
+-- =============================================
+-- Author:		Name
+-- Create date: 
+-- Description:	
+-- =============================================
+CREATE TRIGGER UnitsInStockDeleteTrig 
+   ON  [order details] 
+   for DELETE
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    SET NOCOUNT ON
+    UPDATE [Products]
+      SET [UnitsInStock]=[UnitsInStock]+d.[Quantity]
+      FROM deleted d
+        INNER JOIN [dbo].[Products] p ON p.[ProductID]=d.[ProductID]
+
+END

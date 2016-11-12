@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [headbutton]
+    WITH PASSWORD = N'Cd{,|mglAlZIucj^i&pjnzklmsFT7_&#$!~<fgcrdpre^tml', SID = 0x5578DEDEBC76374CA9A67E370219EBFB, DEFAULT_DATABASE = [NORTHWND], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

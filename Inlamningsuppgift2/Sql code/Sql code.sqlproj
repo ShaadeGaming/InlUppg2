@@ -62,8 +62,8 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
     <Folder Include="dbo\Stored Procedures\" />
-    <Folder Include="dbo\Triggers" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Orders.sql" />
@@ -77,6 +77,7 @@
     <Build Include="dbo\Tables\Region.sql" />
     <Build Include="dbo\Tables\Territories.sql" />
     <Build Include="dbo\Tables\EmployeeTerritories.sql" />
+    <Build Include="dbo\Tables\UnitsInStockChanged.sql" />
     <Build Include="dbo\Tables\Employees.sql" />
     <Build Include="dbo\Tables\CategoryChanges.sql" />
     <Build Include="dbo\Tables\Categories.sql" />
@@ -99,6 +100,14 @@
     <Build Include="dbo\Views\Sales Totals by Amount.sql" />
     <Build Include="dbo\Views\Summary of Sales by Quarter.sql" />
     <Build Include="dbo\Views\Summary of Sales by Year.sql" />
+    <Build Include="dbo\Views\OrderDetailCount.sql" />
+    <Build Include="dbo\Views\SimpleEmployees.sql" />
+    <Build Include="dbo\Views\CategoryProducts.sql" />
+    <Build Include="dbo\Views\CustomerOrderDetails.sql" />
+    <Build Include="dbo\Views\ProductOrderDetailsCount.sql" />
+    <Build Include="Security\okej.sql" />
+    <Build Include="Security\headbutton.sql" />
+    <Build Include="Security\headbutton_1.sql" />
     <Build Include="dbo\Stored Procedures\InsertCustomers.sql" />
     <Build Include="dbo\Stored Procedures\InsertProduct.sql" />
     <Build Include="dbo\Stored Procedures\InsertProducts.sql" />
@@ -113,6 +122,5 @@
     <Build Include="dbo\Stored Procedures\CustomerGetOrders.sql" />
     <Build Include="dbo\Stored Procedures\InsertSupplier.sql" />
     <Build Include="dbo\Stored Procedures\InsertRegion.sql" />
-    <Build Include="dbo\Triggers\MyTrig.sql" />
   </ItemGroup>
 </Project>
