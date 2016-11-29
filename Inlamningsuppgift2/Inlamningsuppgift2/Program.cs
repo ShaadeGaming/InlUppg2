@@ -8,6 +8,7 @@ namespace Inlamningsuppgift2
     {
         private static void Main(string[] args)
         {
+            string cns = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
             int counter = 0;
             int tal = 0;
 
@@ -43,7 +44,7 @@ namespace Inlamningsuppgift2
                         string contactName = Console.ReadLine();
                         Console.WriteLine("Enter your Phone number:");
                         int phoneNumber = int.Parse(Console.ReadLine());
-                        string cns = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+                        
                         SqlConnection cn = new SqlConnection(cns);
                         cn.Open();
                         SqlCommand cmd = cn.CreateCommand();
@@ -80,7 +81,7 @@ namespace Inlamningsuppgift2
                        double unitPrice = double.Parse(Console.ReadLine());
                         
                        
-                        string cns = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+                       
                         SqlConnection cn = new SqlConnection(cns);
                         cn.Open();
                         SqlCommand cmd = cn.CreateCommand();
@@ -104,7 +105,7 @@ namespace Inlamningsuppgift2
             }
             else if (tal == 3)
             {
-                SqlConnection connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=NORTHWND;Trusted_Connection=Yes"); 
+                SqlConnection connection = new SqlConnection(cns); 
                 SqlCommand command = connection.CreateCommand();
                 
                     command.CommandText = "Select ProductID, ProductName from Products";
@@ -118,7 +119,7 @@ namespace Inlamningsuppgift2
                     int selectedID = int.Parse(Console.ReadLine());
                     Console.WriteLine("Enter the new price: ");
                     int price = int.Parse(Console.ReadLine());
-                    string cns = ConfigurationManager.ConnectionStrings["conString"].ConnectionString ;
+                    
                     SqlConnection cn = new SqlConnection(cns);
                     cn.Open();
                     SqlCommand cmd = cn.CreateCommand();
@@ -138,7 +139,7 @@ namespace Inlamningsuppgift2
             }
             else if (tal == 4)
             {
-                using (SqlConnection connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=NORTHWND;Trusted_Connection=Yes"))
+                using (SqlConnection connection = new SqlConnection(cns))
                 using (SqlCommand command = connection.CreateCommand())
                 {
                     command.CommandText = "Select * from CustomerChanges";
